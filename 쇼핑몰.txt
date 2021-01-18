@@ -1,3 +1,12 @@
+interceptor(인터셉터)
+컨트롤러에 들어오는 요청 HttpRequest와 컨트롤러가 응답하는 HttpResponse를 가로채는 역할
+= 관리자만 접근할 수 있는 관리자 페이지에 접근하기 전에 관리자 인증하는 용도로 활용.
+
+
+
+
+
+
 1. 메인페이지(index)
 2. 로그인, 회원가입
 3. 아이디 중복검사기능
@@ -52,4 +61,9 @@ k_board
 k_product
 -> p_id(상품번호), p_name(상품이름), p_price(가격), p_detail(상세설명), p_photo(사진)
 k_order
+-> o_id(주문번호),
 k_cart
+-> 상품명(id)-int, 사용자아이디(userId)-string, 사용자이름(userName)-string, 상품번호(productName)-int, 상품이름(productName)-String 상품단가(procutPrice)-int, 구매수량(amount)-int, 상품가격(money)-int
+
+관리자페이지(k_admin)
+-> 사용자아이디(user_id), 사용자비밀번호(user_password), 사용자이름, 사용자이메일, 사용자 
