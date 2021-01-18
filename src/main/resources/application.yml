@@ -43,5 +43,7 @@
   error:
       whitelabel:
         enabled: false 
+ mybatis:  type-aliases-package: com.kaylaproject.example.domain
+  mapper-locations: mapper/**/*.xml
   
   

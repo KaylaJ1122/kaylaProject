@@ -12,6 +12,12 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	developmentOnly
+	runtimeClssPath {
+		extendsFrom developmentOnly
+	}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -28,6 +34,8 @@ dependencies {
 	// jsp연동
 	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 	compile('javax.sevlet:jstl:1.2')
+	compile group: 'org.springframrwork.security', name: 'spring-security-taglibs', version: '4.2.1.RELEASE'
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 test {
